@@ -184,3 +184,15 @@ C:\Users\jeff\Desktop\school\week7\projects\TrashPickUp\TrashPickUp\bin\Debug\ne
 C:\Users\jeff\Desktop\school\week7\projects\TrashPickUp\TrashPickUp\obj\Debug\netcoreapp3.1\TrashPickUp.csproj.CoreCompileInputs.cache
 C:\Users\jeff\Desktop\school\week7\projects\TrashPickUp\TrashPickUp\obj\Debug\netcoreapp3.1\TrashPickUp.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\jeff\Desktop\school\week7\projects\TrashPickUp\TrashPickUp\obj\Debug\netcoreapp3.1\TrashPickUp.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\jeff\Desktop\school\week7\projects\TrashPickUp\TrashPickUp\obj\Debug\netcoreapp3.1\Razor\Views\Customers\Create.cshtml.g.cs
+C:\Users\jeff\Desktop\school\week7\projects\TrashPickUp\TrashPickUp\obj\Debug\netcoreapp3.1\Razor\Views\Customers\Delete.cshtml.g.cs
+C:\Users\jeff\Desktop\school\week7\projects\TrashPickUp\TrashPickUp\obj\Debug\netcoreapp3.1\Razor\Views\Customers\Details.cshtml.g.cs
+C:\Users\jeff\Desktop\school\week7\projects\TrashPickUp\TrashPickUp\obj\Debug\netcoreapp3.1\Razor\Views\Customers\Edit.cshtml.g.cs
+C:\Users\jeff\Desktop\school\week7\projects\TrashPickUp\TrashPickUp\obj\Debug\netcoreapp3.1\Razor\Views\Customers\Index.cshtml.g.cs
+C:\Users\jeff\Desktop\school\week7\projects\TrashPickUp\TrashPickUp\obj\Debug\netcoreapp3.1\Razor\Views\Customers\View.cshtml.g.cs
+C:\Users\jeff\Desktop\school\week7\projects\TrashPickUp\TrashPickUp\obj\Debug\netcoreapp3.1\Razor\Views\Employees\Create.cshtml.g.cs
+C:\Users\jeff\Desktop\school\week7\projects\TrashPickUp\TrashPickUp\obj\Debug\netcoreapp3.1\Razor\Views\Employees\Delete.cshtml.g.cs
+C:\Users\jeff\Desktop\school\week7\projects\TrashPickUp\TrashPickUp\obj\Debug\netcoreapp3.1\Razor\Views\Employees\Details.cshtml.g.cs
+C:\Users\jeff\Desktop\school\week7\projects\TrashPickUp\TrashPickUp\obj\Debug\netcoreapp3.1\Razor\Views\Employees\Edit.cshtml.g.cs
+C:\Users\jeff\Desktop\school\week7\projects\TrashPickUp\TrashPickUp\obj\Debug\netcoreapp3.1\Razor\Views\Employees\Filter.cshtml.g.cs
+C:\Users\jeff\Desktop\school\week7\projects\TrashPickUp\TrashPickUp\obj\Debug\netcoreapp3.1\Razor\Views\Employees\Index.cshtml.g.cs
