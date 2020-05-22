@@ -6,6 +6,7 @@
 
 }
 <style>
+
     /* Always set the map height explicitly to define the size of the div
     * element that contains the map. */
     #map {
@@ -52,33 +53,19 @@
     </script>*@
 
 <script>
-        function initMap() {
-            var map = new google.maps.Map(document.getElementById('map'), {
-                zoom: 13,
-                center: { lat: 87.6576, lng:  44.0886 }
-            });
-            var geocoder = new google.maps.Geocoder();
-            document.getElementById('submit').addEventListener('click', function () {
-                geocodeAddress(geocoder, map);
-            });
-        }
-        function geocodeAddress(geocoder, resultsMap) {
-            var address = document.getElementById('address').value;
-            geocoder.geocode({ 'address': address }, function (results, status) {
-                if (status === 'OK') {
-                    resultsMap.setCenter(results[0].geometry.location);
-                    var marker = new google.maps.Marker({
-                        map: resultsMap,
-                        position: results[0].geometry.location
-                    });
-                } else {
-                    alert('Geocode was not successful for the following reason: ' + status);
-                }
-            });
-        }
+    // Initialize and add the map
+    function initMap() {
+        // The location of Uluru
+        var uluru = "@Html.ValueFor(model => model.Address)";
+        // The map, centered at Uluru
+        var map = new google.maps.Map(
+            document.getElementById('map'), { zoom: 4, center: uluru });
+        // The marker, positioned at Uluru
+        var marker = new google.maps.Marker({ position: uluru, map: map });
+    }
 </script>
 <!-- Replace the value of the key parameter with your own API key. -->
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCr1D3rSdhAQUyX9-CwqTVam2PSdUj0Lyk&callback=initMap" async defer></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCvPRFzP4Hn9CVHlFOzn30h7szAQIoUf4U&callback=initMap" async defer></script>
 
 <div>
     <a asp-action="Edit" asp-route-id="@Model.Id">Confirm Pickup</a>
