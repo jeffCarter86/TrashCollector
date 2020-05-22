@@ -42,18 +42,20 @@
     </dl>
 </div>
 <div class="row">
-    <input id="AIzaSyCr1D3rSdhAQUyX9-CwqTVam2PSdUj0Lyk" value="API_KEY">
+    
 
     <input id="address" value="@Html.ValueFor(model => model.Address)">
     <input id="submit" type="button" value="Geocode">
 </div>
 <div id="map"></div>
-<!-- Replace the value of the key parameter with your own API key. -->
-@*<script async defer
-            src="https://maps.googleapis.com/maps/api/js?key=API_KEY&callback=initMap">
-    </script>*@
+<div id="AIzaSyCr1D3rSdhAQUyX9-CwqTVam2PSdUj0Lyk" value="API_KEY"></div>
 
-<script>
+    <!-- Replace the value of the key parameter with your own API key. -->
+    @*<script async defer
+                src="https://maps.googleapis.com/maps/api/js?key=API_KEY&callback=initMap">
+        </script>*@
+
+    <script>
     // Initialize and add the map
     function initMap() {
         // The location of Uluru
@@ -64,13 +66,13 @@
         // The marker, positioned at Uluru
         var marker = new google.maps.Marker({ position: uluru, map: map });
     }
-</script>
-<!-- Replace the value of the key parameter with your own API key. -->
-<script src="https://maps.googleapis.com/maps/api/js?key=API_KEY&callback=initMap" async defer></script>
+    </script>
+    <!-- Replace the value of the key parameter with your own API key. -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=API_KEY&callback=initMap" async defer></script>
 
-<div>
-    <a asp-action="Edit" asp-route-id="@Model.Id">Confirm Pickup</a>
-</div>
-<div>
-    <a asp-action="Index">Back to Pickups</a>
-</div>
+    <div>
+        <a asp-action="Edit" asp-route-id="@Model.Id">Confirm Pickup</a>
+    </div>
+    <div>
+        <a asp-action="Index">Back to Pickups</a>
+    </div>
