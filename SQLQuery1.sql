@@ -1,0 +1,2 @@
+﻿SET LOCK_TIMEOUT -1;  
+
