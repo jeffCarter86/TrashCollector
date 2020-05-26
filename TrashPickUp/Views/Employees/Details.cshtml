@@ -42,37 +42,51 @@
     </dl>
 </div>
 <div class="row">
-    
+
 
     <input id="address" value="@Html.ValueFor(model => model.Address)">
     <input id="submit" type="button" value="Geocode">
 </div>
 <div id="map"></div>
-<div id="AIzaSyCr1D3rSdhAQUyX9-CwqTVam2PSdUj0Lyk" value="API_KEY"></div>
+<div id="AIzaSyAQQJjwoMrns5LUI4hNGnSWU9sraXy0hSk" value="API_KEY"></div>
 
-    <!-- Replace the value of the key parameter with your own API key. -->
-    @*<script async defer
-                src="https://maps.googleapis.com/maps/api/js?key=API_KEY&callback=initMap">
-        </script>*@
 
-    <script>
-    // Initialize and add the map
-    function initMap() {
-        // The location of Uluru
-        var uluru = "@Html.ValueFor(model => model.Address)";
-        // The map, centered at Uluru
-        var map = new google.maps.Map(
-            document.getElementById('map'), { zoom: 4, center: uluru });
-        // The marker, positioned at Uluru
-        var marker = new google.maps.Marker({ position: uluru, map: map });
+
+<script>
+    var geocoder;
+    var map;
+    function initialize() {
+        geocoder = new google.maps.Geocoder();
+        var mapOptions = {
+            zoom: 17,
+        }
+        map = new google.maps.Map(document.getElementById('map'), mapOptions);
+        codeAddress();
     }
-    </script>
-    <!-- Replace the value of the key parameter with your own API key. -->
-    <script src="https://maps.googleapis.com/maps/api/js?key=API_KEY&callback=initMap" async defer></script>
+    function codeAddress() {
+        var address = "@Model.Address";
+        geocoder.geocode({ 'address': address }, function (results, status) {
+            if (status == 'OK') {
+                map.setCenter(results[0].geometry.location);
+                var marker = new google.maps.Marker({
+                    map: map,
+                    position: results[0].geometry.location
+                });
+            } else {
+                alert('Geocode was not successful for the following reason: ' + status);
+            }
+        });
+    }</script>
+<body onload="initialize()">
+    <div id="map" style="width: 700px; height: 480px;"></div>
+</body>
+<!-- Replace the value of the key parameter with your own API key. -->
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAQQJjwoMrns5LUI4hNGnSWU9sraXy0hSk&callback=initMap" async defer></script>
 
-    <div>
-        <a asp-action="Edit" asp-route-id="@Model.Id">Confirm Pickup</a>
-    </div>
-    <div>
-        <a asp-action="Index">Back to Pickups</a>
-    </div>
+    </script>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id">Confirm Pickup</a>
+</div>
+<div>
+    <a asp-action="Index">Back to Pickups</a>
+</div>
