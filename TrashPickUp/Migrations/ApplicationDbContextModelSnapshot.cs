@@ -3,17 +3,15 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
-using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using TrashPickUp.Data;
 
-namespace TrashPickUp.Data.Migrations
+namespace TrashPickUp.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20200521133239_init")]
-    partial class init
+    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
     {
-        protected override void BuildTargetModel(ModelBuilder modelBuilder)
+        protected override void BuildModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -50,15 +48,15 @@ namespace TrashPickUp.Data.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "3e3b9b16-bb0e-48c7-9ecd-c72155ea6c8b",
-                            ConcurrencyStamp = "575c5f07-f0bf-4cb7-854c-394d092c938b",
+                            Id = "2ed6cfc5-b688-461f-82ef-83a73baffd27",
+                            ConcurrencyStamp = "323d8f70-220a-4cc9-a915-e1ab11d1fba2",
                             Name = "Customer",
                             NormalizedName = "Customer"
                         },
                         new
                         {
-                            Id = "34a8ed35-1191-420b-a725-7382577060ad",
-                            ConcurrencyStamp = "e2b47532-07e0-49fd-b146-e49e0dc49d1a",
+                            Id = "9aa57d88-d9d0-4a7e-9d5f-5bc7548388df",
+                            ConcurrencyStamp = "6c70c744-8511-47b9-b694-f5f2ba8e9382",
                             Name = "Employee",
                             NormalizedName = "Employee"
                         });
@@ -180,12 +178,10 @@ namespace TrashPickUp.Data.Migrations
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserLogin<string>", b =>
                 {
                     b.Property<string>("LoginProvider")
-                        .HasColumnType("nvarchar(128)")
-                        .HasMaxLength(128);
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("ProviderKey")
-                        .HasColumnType("nvarchar(128)")
-                        .HasMaxLength(128);
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("ProviderDisplayName")
                         .HasColumnType("nvarchar(max)");
@@ -222,12 +218,10 @@ namespace TrashPickUp.Data.Migrations
                         .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("LoginProvider")
-                        .HasColumnType("nvarchar(128)")
-                        .HasMaxLength(128);
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("Name")
-                        .HasColumnType("nvarchar(128)")
-                        .HasMaxLength(128);
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("Value")
                         .HasColumnType("nvarchar(max)");

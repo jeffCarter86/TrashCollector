@@ -64,7 +64,7 @@
         codeAddress();
     }
     function codeAddress() {
-        var address = "@Model.Address";
+        var address = "@Model.Address, @Model.ZipCode";
         geocoder.geocode({ 'address': address }, function (results, status) {
             if (status == 'OK') {
                 map.setCenter(results[0].geometry.location);
