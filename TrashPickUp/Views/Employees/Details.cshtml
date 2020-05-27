@@ -39,6 +39,12 @@
         <dd class="col-sm-10">
             @Html.DisplayFor(model => model.Address)
         </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ZipCode)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ZipCode)
+        </dd>
     </dl>
 </div>
 <div>
@@ -48,10 +54,6 @@
     <a asp-action="Index">Back to Pickups</a>
 </div>
 <div id="map"></div>
-<div id="AIzaSyAQQJjwoMrns5LUI4hNGnSWU9sraXy0hSk" value="API_KEY"></div>
-
-
-
 <script>
     var geocoder;
     var map;
@@ -81,7 +83,7 @@
     <div id="map" style="width: 700px; height: 480px;"></div>
 </body>
 <!-- Replace the value of the key parameter with your own API key. -->
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAQQJjwoMrns5LUI4hNGnSWU9sraXy0hSk&callback=initMap" async defer></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=@GoogleMapsAPI.API&callback=initialize" async defer></script>
 
     </script>
 
